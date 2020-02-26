@@ -55,7 +55,6 @@ class LRUCache:
 
         else:
             lruNode = self.indexes.remove_from_head()
-            print("lru", lruNode)
             del self.storage[lruNode[0]]
             self.indexes.add_to_tail((key, value))
             self.storage[key] = self.indexes.tail
